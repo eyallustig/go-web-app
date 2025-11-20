@@ -1,13 +1,13 @@
-name: CI - Build, Test & Lint
+name: CI - App Build, Test & Docker Push
 
 on:
   push:
     branches:
       - 'main'
     paths-ignore:
+      - 'helm/**'
       - 'docs/**'
-      - '**/*.md'  # This will ignore all markdown files
-
+      - '**/*.md'
 
 env:
   GO_VERSION: "1.22.5"
